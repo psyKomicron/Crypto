@@ -34,14 +34,22 @@ public class Crypto {
     {
         try {
             Client client = new Client();
-            while (client.receiveMessage() != "FIN")
+            while (!client.receiveMessage().equals("FIN"))
             {
                 String message = client.receiveMessage();
-                System.out.println(message);
+                //System.out.println(message);
                 if (message.charAt(0) != 'O' || message.charAt(0) != '-')
                 {
-                    int value = Integer.parseInt(message);
-                    client.sendMessage("" + value);
+                    try
+                    {
+                        int value = Integer.parseInt(message);
+                        value++;
+                        client.sendMessage("" + value);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                        System.err.println("Cannot convert data");
+                    }
                 }
             }
             client.end();
