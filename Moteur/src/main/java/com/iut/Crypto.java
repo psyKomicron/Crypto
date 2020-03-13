@@ -5,12 +5,14 @@
  */
 package com.iut;
 
-import com.iut.coucheReseau.client.Client;
+import com.iut.network.client.Client;
 import com.iut.moteur.algorithme.compression.generateurdecles.GenerateurDeClesRLE;
 import com.iut.moteur.exceptions.ExceptionConversionImpossible;
 import com.iut.moteur.protocoles.ProtocoleSubstitution;
 import com.iut.moteur.protocoles.ProtocoleTransposition;
 import com.iut.moteur.protocoles.ProtocoleVigenere;
+import com.iut.moteur.protocoles.trials.Trial_1;
+import com.iut.moteur.protocoles.trials.Trial_Random;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,29 +34,7 @@ public class Crypto {
     
     public static void main(String[] args)
     {
-        try {
-            Client client = new Client();
-            while (!client.receiveMessage().equals("FIN"))
-            {
-                String message = client.receiveMessage();
-                //System.out.println(message);
-                if (message.charAt(0) != 'O' || message.charAt(0) != '-')
-                {
-                    try
-                    {
-                        int value = Integer.parseInt(message);
-                        value++;
-                        client.sendMessage("" + value);
-                    }
-                    catch (NumberFormatException e)
-                    {
-                        System.err.println("Cannot convert data");
-                    }
-                }
-            }
-            client.end();
-        } catch (IOException ex) {
-            Logger.getLogger(Crypto.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        //new Trial_1().executer();
+        new Trial_Random().executer();
     }
 }

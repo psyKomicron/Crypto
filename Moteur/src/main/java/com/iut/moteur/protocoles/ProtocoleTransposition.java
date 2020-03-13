@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  *
  * @author jm786386
  */
-public class ProtocoleTransposition extends Protocole implements IProtocole {
+public class ProtocoleTransposition extends ProtocoleCryptographie implements IProtocole {
 
     @Override
     public void executer() {

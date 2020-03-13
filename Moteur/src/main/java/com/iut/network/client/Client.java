@@ -1,4 +1,4 @@
-package com.iut.coucheReseau.client;
+package com.iut.network.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;

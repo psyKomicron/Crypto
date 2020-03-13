@@ -26,7 +26,7 @@ import java.util.logging.Logger;
  *
  * @author MonsieurJ
  */
-public class ProtocoleSubstitution extends Protocole implements IProtocole {
+public class ProtocoleSubstitution extends ProtocoleCryptographie implements IProtocole {
 
     @Override
     public void executer() {

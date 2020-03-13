@@ -8,19 +8,16 @@ package com.iut.moteur.protocoles;
 import com.iut.Crypto;
 import com.iut.moteur.algorithme.chiffrement.Algorithme;
 import com.iut.moteur.donnes.messages.Message;
-import com.iut.moteur.donnes.messages.MessageString;
 import com.iut.moteur.donnes.messages.cles.Cles;
 import com.iut.moteur.entites.Personne;
 import com.iut.moteur.entites.Univers;
 import com.iut.moteur.exceptions.ExceptionCryptographie;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author MonsieurJ
  */
-public abstract class Protocole {
+public abstract class ProtocoleCryptographie {
     
     protected void build(Personne Alice, Personne Bob, 
             Algorithme algo, 

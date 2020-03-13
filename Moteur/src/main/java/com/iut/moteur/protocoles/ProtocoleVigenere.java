@@ -25,7 +25,7 @@ import java.util.logging.Logger;
  *
  * @author jm786386
  */
-public class ProtocoleVigenere extends Protocole implements IProtocole {
+public class ProtocoleVigenere extends ProtocoleCryptographie implements IProtocole {
 
     @Override
     public void executer() {
