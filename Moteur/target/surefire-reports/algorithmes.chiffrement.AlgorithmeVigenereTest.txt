@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: algorithmes.chiffrement.AlgorithmeVigenereTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec <<< FAILURE!
+algorithmes.chiffrement.AlgorithmeVigenereTest.testDechiffrer()  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.iut.moteur.algorithme.chiffrement.AlgorithmeVigenere.dechiffrer(AlgorithmeVigenere.java:66)
+	at algorithmes.chiffrement.AlgorithmeVigenereTest.testDechiffrer(AlgorithmeVigenereTest.java:57)
+
+algorithmes.chiffrement.AlgorithmeVigenereTest.testChiffrer()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.iut.moteur.algorithme.chiffrement.AlgorithmeVigenere.chiffrer(AlgorithmeVigenere.java:32)
+	at algorithmes.chiffrement.AlgorithmeVigenereTest.testChiffrer(AlgorithmeVigenereTest.java:38)
+
