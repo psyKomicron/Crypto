@@ -16,12 +16,11 @@ import java.util.logging.Logger;
  *
  * @author jm786386
  */
-public class Trial_1 implements IProtocole {
+public class Trial_1 implements ITrial {
 
     @Override
-    public void executer() {
+    public void execute(Client client) {
         try {
-            Client client = new Client();
             while (!client.receiveMessage().equals("FIN"))
             {
                 String message = client.receiveMessage();

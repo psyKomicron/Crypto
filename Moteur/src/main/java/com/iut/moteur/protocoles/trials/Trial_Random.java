@@ -7,7 +7,7 @@ package com.iut.moteur.protocoles.trials;
 
 import com.iut.moteur.algorithme.chiffrement.generateurdecles.BinairyKeyGenerator;
 import com.iut.moteur.exceptions.ExceptionConversionImpossible;
-import com.iut.moteur.protocoles.IProtocole;
+import com.iut.network.client.Client;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,17 +15,16 @@ import java.util.logging.Logger;
  *
  * @author jm786386
  */
-public class Trial_Random implements IProtocole {
+public class Trial_Random implements ITrial {
 
     @Override
-    public void executer() {
-        for (int i = 0; i < 10; i++)
+    public void execute(Client client) {
+        try
         {
-            try {
-                System.out.println(new BinairyKeyGenerator(10).genererClePrivee().getCle("RSA-key").asString());
-            } catch (ExceptionConversionImpossible ex) {
-                Logger.getLogger(Trial_Random.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            client.sendMessage(new BinairyKeyGenerator(10).genererClePrivee().getCle("RSA-key").asString());
+        } catch (ExceptionConversionImpossible ex)
+        {
+            Logger.getLogger(Trial_Random.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     

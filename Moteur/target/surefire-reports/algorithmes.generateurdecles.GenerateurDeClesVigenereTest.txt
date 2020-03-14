@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: algorithmes.generateurdecles.GenerateurDeClesVigenereTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0 sec <<< FAILURE!
-algorithmes.generateurdecles.GenerateurDeClesVigenereTest.testGenererClePrivee()  Time elapsed: 0 sec  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec <<< FAILURE!
+algorithmes.generateurdecles.GenerateurDeClesVigenereTest.testGenererClePrivee()  Time elapsed: 0.005 sec  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: not <null>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
 	at org.junit.jupiter.api.Assertions.fail(Assertions.java:84)

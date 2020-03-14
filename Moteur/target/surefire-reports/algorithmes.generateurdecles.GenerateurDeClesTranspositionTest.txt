@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: algorithmes.generateurdecles.GenerateurDeClesTranspositionTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.428 sec <<< FAILURE!
-algorithmes.generateurdecles.GenerateurDeClesTranspositionTest.testGenererClePrivee()  Time elapsed: 0.428 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at algorithmes.generateurdecles.GenerateurDeClesTranspositionTest.testGenererClePrivee(GenerateurDeClesTranspositionTest.java:43)
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 sec
