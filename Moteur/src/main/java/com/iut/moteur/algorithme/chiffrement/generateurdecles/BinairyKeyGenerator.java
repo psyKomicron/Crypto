@@ -14,8 +14,8 @@ import java.security.SecureRandom;
  * @author jm786386
  */
 public class BinairyKeyGenerator implements GenerateurDeCles {
-    private SecureRandom _generator = new SecureRandom();
-    private int _keySize;
+    private final SecureRandom _generator = new SecureRandom();
+    private final int _keySize;
 
     public BinairyKeyGenerator(int keySize)
     {

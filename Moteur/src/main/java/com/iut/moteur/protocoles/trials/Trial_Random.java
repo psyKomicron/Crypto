@@ -6,6 +6,7 @@
 package com.iut.moteur.protocoles.trials;
 
 import com.iut.moteur.algorithme.chiffrement.generateurdecles.BinairyKeyGenerator;
+import com.iut.moteur.donnes.MotBinaire;
 import com.iut.moteur.exceptions.ExceptionConversionImpossible;
 import com.iut.network.client.Client;
 import java.util.logging.Level;
@@ -28,4 +29,8 @@ public class Trial_Random implements ITrial {
         }
     }
     
+    private String generateKey() throws ExceptionConversionImpossible
+    {
+        return new BinairyKeyGenerator(10).genererClePrivee().getCle("RSA-key").asString();
+    }
 }

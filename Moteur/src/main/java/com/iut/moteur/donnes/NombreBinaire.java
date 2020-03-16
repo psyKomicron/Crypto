@@ -1,6 +1,9 @@
 package com.iut.moteur.donnes;
 
+import com.iut.moteur.donnes.messages.cles.CleString;
+import com.iut.moteur.donnes.messages.cles.Cles;
 import com.iut.moteur.exceptions.ExceptionConversionImpossible;
+import java.security.SecureRandom;
 import java.util.BitSet;
 
 /**
@@ -13,14 +16,18 @@ public class NombreBinaire {
     
     //Génère un nombre binaire aléatoire de "taille" bits au maximum.
     public static NombreBinaire randomAvecTailleMax(int taille) {
-       //TODO
-       return null;
+        String key = "";
+        SecureRandom generator = new SecureRandom();
+        for (int i = 0; i < taille; i++)
+            key += (generator.nextBoolean() ? '1' : '0');
+        return new NombreBinaire(key);
     }
     
     
     //renvoie un nombre aléatoire entre min (inclu) et max (non inclu)
     public static NombreBinaire random(NombreBinaire min,NombreBinaire max) {
-       //TODO
+       NombreBinaire binary = randomAvecTailleMax(max.getTaille());
+       while (!(binary.estInferieurA(max) && binary.estSuperieurA(min)))
        return null;
     }
    
@@ -162,6 +169,11 @@ public class NombreBinaire {
      public boolean estInferieurA(NombreBinaire mot2) {
        //TODO
        return false;
+     }
+     
+     public boolean estSuperieurA(NombreBinaire mot2)
+     {
+         return !(estEgal(mot2) || estInferieurA(mot2));
      }
      
      //Calcul this modulo mot2 via une division euclidienne
